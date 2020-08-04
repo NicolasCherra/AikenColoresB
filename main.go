@@ -15,7 +15,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-var local = ":3000"
+var local = "3000"
 var produccion = os.Getenv("PORT")
 var port = ""
 
@@ -175,5 +175,5 @@ func main() {
 	router.HandleFunc("/souvenir", CreateSouvenir).Methods("POST")
 	router.HandleFunc("/souvenir/{_id}", DeleteSouvenir).Methods("DELETE")
 
-	log.Fatal(http.ListenAndServe(port, router))
+	log.Fatal(http.ListenAndServe(":"+port, router))
 }
