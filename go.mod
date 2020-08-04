@@ -1,4 +1,4 @@
-module main.go
+module github.com/NicolasCherra/AikenColoresB
 
 go 1.14
 
