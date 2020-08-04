@@ -25,8 +25,8 @@ type Souvenir struct {
 	Nombre      string `json:"nombre" bson:"nombre,omitempty"`
 	Categoria   string `json:"categoria" bson:"categoria,omitempty"`
 	Descripcion string `json:"descripcion" bson:"descripcion,omitempty"`
-	Precio      uint16 `json:"precio" bson:"precio,omitempty"`
-	Stock       uint16 `json:"stock" bson:"stock,omitempty"`
+	Precio      string `json:"precio" bson:"precio,omitempty"`
+	Stock       string `json:"stock" bson:"stock,omitempty"`
 	Fecha       string `json:"fecha" bson:"fecha,omitempty"`
 }
 
