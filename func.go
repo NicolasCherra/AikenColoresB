@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 	"go.mongodb.org/mongo-driver/bson"
@@ -31,7 +32,7 @@ var SouvenirsMDB *mongo.Collection
 // ConnectMongoDB conexion a MongoDB
 func ConnectMongoDB() {
 
-	clientOptions := options.Client().ApplyURI("mongodb+srv://nicolas17197:Qi5IKFhHo9oyUQLy@cluster0-xyuut.gcp.mongodb.net/AikenColores?retryWrites=true&w=majority")
+	clientOptions := options.Client().ApplyURI(os.Getenv("URL_MONGODB"))
 	client, err := mongo.Connect(context.TODO(), clientOptions)
 
 	if err != nil {
